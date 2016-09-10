@@ -1,0 +1,10 @@
+server:
+  image: scher200/alpine-btsync
+  ports:
+    - "55555:55555"
+    - "8888:8888"
+  volumes:
+    - "./testsyncfolder:/sync/testsyncfolder"
+    - "./config:/config"
+  environment:
+    KEYS_ONLY: 1
